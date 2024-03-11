@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class NumberConverter {
+private:
+    int numbers[5];
+    string words[10] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+public:
+    void acceptNumbers() {
+        cout << "Enter five integers from 0 to 9: " << endl;
+        for (int i = 0; i < 5; ++i) {
+            cin >> numbers[i];
+        }
+    }
+
+    void displayWords() {
+        cout << "Equivalent values in words:" << endl;
+        for (int i = 0; i < 5; ++i) {
+            cout << words[numbers[i]] << endl;
+        }
+    }
+};
+
+int main() {
+    NumberConverter converter;
+    converter.acceptNumbers();
+    converter.displayWords();
+    return 0;
+}
